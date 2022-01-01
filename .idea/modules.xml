@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/akka-essentials.iml" filepath="$PROJECT_DIR$/.idea/modules/akka-essentials.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/akka-essentials-build.iml" filepath="$PROJECT_DIR$/.idea/modules/akka-essentials-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akka-typed-essentials.iml" filepath="$PROJECT_DIR$/.idea/modules/akka-typed-essentials.iml" />
     </modules>
   </component>
 </project>

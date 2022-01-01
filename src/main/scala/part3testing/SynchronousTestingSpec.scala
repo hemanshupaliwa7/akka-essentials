@@ -30,7 +30,8 @@ class SynchronousTestingSpec extends WordSpecLike with BeforeAndAfterAll {
     }
 
     "work on the calling thread dispatcher" in {
-      val counter = system.actorOf(Props[Counter])
+//      val counter = system.actorOf(Props[Counter].withDispatcher(CallingThreadDispatcher.Id)) // act sync
+      val counter = system.actorOf(Props[Counter]) // act async
       val probe = TestProbe()
 
       probe.send(counter, Read)
