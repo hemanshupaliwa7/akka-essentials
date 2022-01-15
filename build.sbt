@@ -1,5 +1,5 @@
 val akkaVersion = "2.5.13"
-val akkaTypedVersion = "2.6.17"
+val akkaTypedVersion = "2.6.18"
 val scalaTestVersion = "3.0.5"
 val scalaCompilerVersion = "2.12.7"
 
@@ -23,7 +23,7 @@ lazy val `akka-typed` = project
       "com.typesafe.akka" %% "akka-actor-typed" % akkaTypedVersion,
       "ch.qos.logback" % "logback-classic" % "1.2.3",
       "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaTypedVersion,
-      "org.scalatest" %% "scalatest" % scalaTestVersion
+      "org.scalatest" %% "scalatest" % "3.1.4"
     ),
     scalaVersion := scalaCompilerVersion,
     version := "0.1",

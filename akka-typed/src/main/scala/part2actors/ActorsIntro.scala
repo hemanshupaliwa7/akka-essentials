@@ -17,6 +17,9 @@ object ActorsIntro extends App {
       anotherWordCounter ! "A different message"
       // asynchronous!
 
+      val person = ctx.spawn(Person("Bob"), "person")
+      person ! "hi"
+
       Behaviors.empty
     }
   }
@@ -38,6 +41,17 @@ object ActorsIntro extends App {
           totalWords += message.split(" ").length
           Behaviors.same
         case msg => println(s"[word counter] I cannot understand ${msg.toString}")
+          Behaviors.same
+      }
+    }
+  }
+
+  object Person {
+    def apply(name: String): Behavior[Any] = Behaviors.setup[Any] { ctx =>
+      Behaviors.receiveMessage {
+        case "hi" => println(s"Hi, my name is $name")
+          Behaviors.same
+        case _ =>
           Behaviors.same
       }
     }
